@@ -3989,6 +3989,16 @@ video {
       color: white;
       width: 60%;
       margin-bottom: 10px; }
+    .container-wrapper-second-header .block-wrapper-title .block-swiper-container-header .swiper-slide {
+      opacity: 0;
+      -webkit-transition: opacity 1s;
+      transition: opacity 1s;
+      -webkit-transition-delay: 0.25s;
+      transition-delay: 0.25s; }
+    .container-wrapper-second-header .block-wrapper-title .block-swiper-container-header .swiper-slide.swiper-slide-active {
+      opacity: 1;
+      -webkit-transition-delay: 0.15s;
+      transition-delay: 0.15s; }
     .container-wrapper-second-header .block-wrapper-title .title {
       color: white;
       width: 100%;

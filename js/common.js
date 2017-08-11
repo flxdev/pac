@@ -55,14 +55,14 @@ function initClosePopup() {
 
 function initSliderHeader() {
     var mySwiper = new Swiper('.block-swiper-container-header', {
-        speed: 400,
+        speed: 1000,
         spaceBetween: 100,
         loop: true,
         pagination: '.swiper-pagination',
         paginationClickable: true,
         virtualTranslate: false,
-        touchReleaseOnEdges: true,
-        effect: 'slide'
+        touchReleaseOnEdges: false,
+        simulateTouch: false
     });
 }
 
