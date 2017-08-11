@@ -24,9 +24,14 @@ function initYandexMap() {
 
         myMap.geoObjects
             .add(myPlacemark);
-        myMap.behaviors.disable('scrollZoom');
-        myMap.behaviors.disable('drag');
 
+
+
+
+        if ($(window).width() < 1025) {
+            myMap.behaviors.disable('drag');
+            myMap.behaviors.disable('scrollZoom');
+        }
     });
 }
 
