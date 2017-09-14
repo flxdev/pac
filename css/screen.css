@@ -4646,6 +4646,11 @@ input[type=radio] {
   .wrapp_menu_categories-content .menu_categories-content[data-index='4'] .menu_categories-content-header .wrapp_content .menu-center .menu-center_list {
     width: 50%; }
 
+.wrapp_menu_categories-content .menu_categories-content.small-width {
+  width: 500px; }
+  .wrapp_menu_categories-content .menu_categories-content.small-width .menu_categories-content-header .wrapp_content .menu-center .menu-center_list {
+    width: 50%; }
+
 .wrapp_menu_categories-content .menu_categories-content {
   display: none;
   width: 980px;
@@ -7961,6 +7966,8 @@ input[type=radio] {
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
     margin-right: 20px; }
+    .link-prev-txt span .st0 {
+      fill: #0a3c90; }
 
 .block-two-col_row {
   font-size: 0;
@@ -7990,6 +7997,9 @@ input[type=radio] {
 
 .no-border {
   border: none; }
+
+.wrapper-popup.response {
+  display: none; }
 
 .wrapper_row {
   font-size: 0; }
@@ -11134,7 +11144,7 @@ p + .wrapper_row-hotline {
     width: 100%;
     margin-left: 0; }
   .wrapper_row-nav li .wrapper-accordion-nav .wrapper-accordion-nav_link{
-    padding: 18px 30px; }
+    padding: 18px 0; }
   .block-wrapper-title_slicky{
     position: relative;
     padding-left: 15px;
@@ -11450,7 +11460,20 @@ p + .wrapper_row-hotline {
   .content-row-wrapper_text-slider .swiper-button-prev{
     bottom: -45px; }
   .content-row-wrapper_text.box-slider + .wrapper_row-social-print{
-    margin-top: 90px; } }
+    margin-top: 90px; }
+  .map-site-content_list.page-m{
+    display: none; }
+  .container-search-results .block-modile-menu.white-menu .wrapper-accordion-mobile-menu li{
+    border-top: 1px solid #e3e3e3; }
+  .container-search-results .block-modile-menu.white-menu .wrapper-accordion-mobile-menu li p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #0a3c90; }
+  .container-search-results .block-modile-menu.white-menu .wrapper-accordion-mobile-menu li > a{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #0a3c90;
+    padding: 12px 0 15px; } }
   @media all and (max-width: 850px){
   .wrapper-admission-campaign .wrapper-admission-campaign_block .wrapper-admission-campaign_btn .wrapper-admission-campaign_btn-t{
     padding: 15px 10px; }

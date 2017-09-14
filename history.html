@@ -245,9 +245,9 @@
                       <li><a href="#">Второе высшее образование</a></li>
                       <li><a href="#">Стоимость обучения</a></li>
                       <li><a href="#">Централизованное тестирование</a></li>
-                      <li><a href="javascript:;" data-fancybox data-src="#hidden-content-t-y">Общежитие</a></li>
-                      <li><a href="javascript:;" data-fancybox data-src="#hidden-content-t-y-r">Проходной балл</a></li>
-                      <li><a href="javascript:;" data-fancybox data-src="#hidden-content-t-y-p">Преподавательский состав</a></li>
+                      <li><a href="#">Общежитие</a></li>
+                      <li><a href="#">Проходной балл</a></li>
+                      <li><a href="#">Преподавательский состав</a></li>
                       <li><a href="#">Правила приёма</a></li>
                       <li><a href="#">Список поступивших студентов                                </a></li>
                     </ul>
@@ -269,7 +269,7 @@
               <li><a class="active-link topAnchorLink" href="entrant.html" data-index="2">Обучающимся</a></li>
               <li><a class="active-link topAnchorLink" href="about.html" data-index="3">Академия</a></li>
               <li class="hidden-sm-menu"><a class="active-link topAnchorLink" href="services.html" data-index="4">Услуги</a></li>
-              <li class="hidden-sm-menu"><a class="menu-no topAnchorLink" href="press-center.html">Пресс-центр</a></li>
+              <li class="hidden-sm-menu"><a class="active-link topAnchorLink" href="press-center.html" data-index="5">Пресс-центр</a></li>
               <li class="hidden-sm-menu"><a class="menu-no topAnchorLink" href="contact.html">Контакты</a></li>
             </ul>
             <div class="block-search-btn js-search-open"><svg width="16.6" height="16.6" xmlns="http://www.w3.org/2000/svg">
@@ -524,14 +524,31 @@
               <div class="menu_categories-content js-menu-category-content-item" data-index="4">
                 <div class="menu_categories-content-header">
                   <div class="wrapp_content js-menu-item-hover">
-                    <div class="menu-center">
+                    <div class="menu-center small-menu-center">
                       <ul class="menu-center_list">
                         <li><a class="topAnchorLink" href="#">Спортивный комплекс</a></li>
                         <li><a class="topAnchorLink" href="#">Жилищный комплекс</a></li>
-                        <li><a class="topAnchorLink" href="#">Редакционно-издательский центр</a></li>
                       </ul>
                       <ul class="menu-center_list">
+                        <li><a class="topAnchorLink" href="#">Редакционно-издательский центр</a></li>
                         <li><a class="topAnchorLink" href="#">Торговый комплекс</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="menu_categories-content js-menu-category-content-item" data-index="5">
+                <div class="menu_categories-content-header">
+                  <div class="wrapp_content js-menu-item-hover">
+                    <div class="menu-center small-menu-center">
+                      <ul class="menu-center_list">
+                        <li><a class="topAnchorLink" href="#">Анонсы</a></li>
+                        <li><a class="topAnchorLink" href="#">Новости</a></li>
+                        <li><a class="topAnchorLink" href="#">Календарь наших мероприятий</a></li>
+                      </ul>
+                      <ul class="menu-center_list">
+                        <li><a class="topAnchorLink" href="#">Конференции</a></li>
+                        <li><a class="topAnchorLink" href="#">Другое</a></li>
                       </ul>
                     </div>
                   </div>
@@ -1631,18 +1648,24 @@
           </div>
         </form>
       </div>
+      <!-- Modal Window-->
+      <div class="wrapper-popup response">
+        <div class="three-title-popup">Благодарим вас!</div>
+        <p>Форма обратной связи успешно отправлена. С вами свяжутся в ближайшее время!</p>
+        <div class="btn-close-c"><span>Закрыть</span></div>
+      </div>
     </div>
     <div class="w-p" id="hidden-content-q" style="display: none;">
       <div class="wrapper-popup">
         <div class="three-title-popup">Вопрос ректору</div>
-        <form>
+        <form class="js-form">
           <div class="wrapper-form">
             <div class="block-label-input">
               <div class="block-label">
                 <label>Имя<span>*</span></label>
               </div>
               <div class="block-input">
-                <input type="text">
+                <input class="input-box" data-validation="length  required" type="text" data-validation-length="min3" data-validation-error-msg="Поле обязательно для заполнения">
               </div>
             </div>
             <div class="block-label-input">
@@ -1650,7 +1673,7 @@
                 <label>E-mail<span>*</span></label>
               </div>
               <div class="block-input">
-                <input type="email">
+                <input type="email" data-validation="email required" data-validation-error-msg="Поле обязательно для заполнения">
               </div>
             </div>
             <div class="block-label-input">
@@ -1658,7 +1681,7 @@
                 <label>Телефон<span>*</span></label>
               </div>
               <div class="block-input">
-                <input type="tel">
+                <input class="input-box" type="tel" data-validation="custom" data-validation-regexp="^[-0-9()+ ]+$" data-validation-error-msg="Поле обязательно для заполнения">
               </div>
             </div>
             <div class="block-label-input">
@@ -1668,7 +1691,7 @@
               <div class="block-input">
                 <div class="wrapper-teaching-staff_select">
                   <div class="wrapper-teaching-staff_select-select">
-                    <select class="select2 select-popup" style="width: 100%;">
+                    <select class="select2 select-popup" style="width: 100%;" data-validation="required" data-validation-error-msg="Поле обязательно для заполнения">
                       <option value="Вопрос 1">Вопрос 1</option>
                       <option value="Вопрос 2">Вопрос 2</option>
                       <option value="Вопрос 3">Вопрос 3</option>
@@ -1685,7 +1708,7 @@
                 <label>Вопрос<span>*</span></label>
               </div>
               <div class="block-input">
-                <textarea></textarea>
+                <textarea class="input-box" data-validation="length  required" data-validation-length="min3" data-validation-error-msg="Поле обязательно для заполнения"></textarea>
               </div>
             </div>
             <div class="block-btn-form">
@@ -1693,6 +1716,12 @@
             </div>
           </div>
         </form>
+      </div>
+      <!-- Modal Window-->
+      <div class="wrapper-popup response">
+        <div class="three-title-popup">Благодарим вас!</div>
+        <p>Вопрос отправлен!</p>
+        <div class="btn-close-c"><span>Закрыть</span></div>
       </div>
     </div>
     <div class="w-p" id="hidden-content-e-s" style="display: none;">
@@ -1829,6 +1858,12 @@
           </div>
         </form>
       </div>
+      <!-- Modal Window-->
+      <div class="wrapper-popup response">
+        <div class="three-title-popup">Благодарим вас!</div>
+        <p>Вы успешно зарегистрировались на сайте Академии управления при Презденте Республики Беларусь. Следуйте дальнейшим иснтрукциям высланым на указанный вами e-mail.</p>
+        <div class="btn-close-c"><span>Закрыть</span></div>
+      </div>
     </div>
     <div class="w-p" id="hidden-content-r-p" style="display: none;">
       <div class="wrapper-popup">
@@ -1850,23 +1885,8 @@
           </div>
         </form>
       </div>
-    </div>
-    <div class="w-p" id="hidden-content-t-y" style="display: none;">
-      <div class="wrapper-popup">
-        <div class="three-title-popup">Благодарим вас!</div>
-        <p>Форма обратной связи успешно отправлена. С вами свяжутся в ближайшее время!</p>
-        <div class="btn-close-c"><span>Закрыть</span></div>
-      </div>
-    </div>
-    <div class="w-p" id="hidden-content-t-y-r" style="display: none;">
-      <div class="wrapper-popup">
-        <div class="three-title-popup">Благодарим вас!</div>
-        <p>Вы успешно зарегистрировались на сайте Академии управления при Презденте Республики Беларусь. Следуйте дальнейшим иснтрукциям высланым на указанный вами e-mail.</p>
-        <div class="btn-close-c"><span>Закрыть</span></div>
-      </div>
-    </div>
-    <div class="w-p" id="hidden-content-t-y-p" style="display: none;">
-      <div class="wrapper-popup">
+      <!-- Modal Window-->
+      <div class="wrapper-popup response">
         <div class="three-title-popup">Благодарим вас!</div>
         <p>На указанный вами e-mail высланы инструкции по восстановлению пароля.</p>
         <div class="btn-close-c"><span>Закрыть</span></div>
