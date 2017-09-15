@@ -1,14 +1,15 @@
 function initYandexMap() {
     ymaps.ready(function () {
+        var infoMap = $('#map').data("map");
         var myMap = new ymaps.Map('map', {
-                center: [53.886785, 27.538906],
+                center: [infoMap.x, infoMap.y],
                 zoom: 17
             }, {
                 searchControlProvider: 'yandex#search'
             }),
 
             myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-                hintContent: 'Московская 17, Минск, 220007, Республика Беларусь',
+                hintContent: infoMap.description,
             }, {
                 iconLayout: 'default#image',
                 iconImageHref: 'img/balun.png',
@@ -24,9 +25,6 @@ function initYandexMap() {
 
         myMap.geoObjects
             .add(myPlacemark);
-
-
-
 
         if ($(window).width() < 1025) {
             myMap.behaviors.disable('drag');
