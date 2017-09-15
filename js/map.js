@@ -14,8 +14,12 @@ function initYandexMap() {
                 iconLayout: 'default#image',
                 iconImageHref: 'img/balun.png',
                 iconImageSize: [43, 65],
-                iconImageOffset: [-5, -38]
+                iconImageOffset: [-15, -60]
             });
+
+        var position = myMap.getGlobalPixelCenter();
+        myMap.setGlobalPixelCenter([ position[0] + 100, position[1] ]);
+
         //
         // myMap.setCenter(myMap.converter.localPixelsToCoordinates(
         //

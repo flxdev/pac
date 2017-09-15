@@ -550,6 +550,10 @@ function initAnchor() {
     $("a.anchor-touch").click(function() {
         var elementClick = $(this).attr("href");
         var destination = $(elementClick).offset().top - 100;
+
+        // var numberBtnSlider = $(this).attr('data-slider-number');
+        // $('.swiper-anchor-slider').slick('slickGoTo', numberBtnSlider);
+
         $('.active-anchor').removeClass();
         $(this).closest('li').addClass('active-anchor');
         jQuery("html:not(:animated),body:not(:animated)").animate({
@@ -647,6 +651,21 @@ function initSmallMenu() {
     }
 }
 
+function initSliderScroll() {
+    $(window).scroll(function(){
+        var $sections = $('.wrapper-date-content');
+        $sections.each(function(i,el){
+            var top  = $(el).offset().top-150;
+            var bottom = top +$(el).height();
+            var scroll = $(window).scrollTop();
+            var id = $(el).attr('data-number-news');
+            if( scroll > top && scroll < bottom){
+                $('.swiper-anchor-slider').slick('slickGoTo', id);
+            }
+        })
+    });
+}
+
 function initSetting() {
     globalSetting.menuFirstOpen = false;
     globalSetting.menuOtherDel1 = false;
@@ -693,6 +712,7 @@ initIncomingLink();
 initStickyPrint();
 initFilter();
 initSmallMenu();
+initSliderScroll();
 
 if ($(window).width() > 1024) { initSliderAnchor(); }
 $(window).on('resize', function() {

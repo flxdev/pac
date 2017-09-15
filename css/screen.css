@@ -3694,6 +3694,9 @@ p {
 .footer.fadeOutFooter {
   opacity: 0; }
 
+[id^="bx_incl_area"] {
+  display: inline !important; }
+
 .container-wrapper-header {
   position: fixed;
   top: 0;
@@ -4388,11 +4391,20 @@ input[type=radio] {
     display: none;
     width: 800px; }
   .block-wrapper-tab .tab-content.current {
-    display: inherit; }
+    display: inherit;
+    opacity: 1;
+    -webkit-transition: opacity 0.6s;
+    transition: opacity 0.6s;
+    -webkit-transition-delay: 0.15s;
+    transition-delay: 0.15s; }
     .block-wrapper-tab .tab-content.current .wrapper-tab-content {
       opacity: 1;
       -webkit-transition: all 0.5s ease-out;
       transition: all 0.5s ease-out; }
+  .block-wrapper-tab .tab-content.current.loading {
+    opacity: 0;
+    -webkit-transition-delay: 0.15s;
+    transition-delay: 0.15s; }
   .block-wrapper-tab .tabs {
     margin-bottom: 60px; }
     .block-wrapper-tab .tabs .tab-link {
@@ -9437,7 +9449,7 @@ p + .wrapper_row-hotline {
   font-size: 0;
   padding-top: 90px;
   padding-bottom: 80px; }
-  .wrapper-active-cooperation h3 {
+  .wrapper-active-cooperation .three-title {
     padding-left: 105px;
     padding-right: 105px;
     margin-bottom: 70px; }
@@ -9959,6 +9971,14 @@ p + .wrapper_row-hotline {
     font-size: 26px;
     color: #0a3c90;
     padding: 22px; }
+  .container-anchor-slider .slick-slide {
+    opacity: 0; }
+  .container-anchor-slider .slick-slide.slick-active {
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+    opacity: 1;
+    -webkit-transition-delay: 0.5s;
+    transition-delay: 0.5s; }
   @media all and (max-width: 1650px){
   .block-swiper-container-header .swiper-pagination.swiper-pagination-bullets{
     bottom: 40px; }
@@ -11031,8 +11051,10 @@ p + .wrapper_row-hotline {
     padding-right: 0;
     margin-bottom: 30px; }
   .wrapper_row-nav li a{
-    padding-left: 0;
-    padding-right: 0; }
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: -15px;
+    margin-right: -15px; }
   .wrapper_row-rectorate-description-b .wrapper_row-rectorate-description_avatar{
     width: 100%;
     margin-bottom: 20px; }
@@ -11144,7 +11166,7 @@ p + .wrapper_row-hotline {
     width: 100%;
     margin-left: 0; }
   .wrapper_row-nav li .wrapper-accordion-nav .wrapper-accordion-nav_link{
-    padding: 18px 0; }
+    padding: 18px 15px; }
   .block-wrapper-title_slicky{
     position: relative;
     padding-left: 15px;
@@ -11271,7 +11293,7 @@ p + .wrapper_row-hotline {
     width: 100%; }
   .wrapper-active-cooperation{
     padding: 40px 15px 30px 15px; }
-  .wrapper-active-cooperation h3{
+  .wrapper-active-cooperation .three-title{
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 40px; }
