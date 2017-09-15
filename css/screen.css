@@ -7125,6 +7125,8 @@ input[type=radio] {
   margin-right: 3%;
   margin-top: 60px;
   margin-bottom: 20px; }
+  .content-contacts-box .content-contacts-box_row {
+    width: 100%; }
   .content-contacts-box .content-contacts-box_title {
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
@@ -7162,11 +7164,37 @@ input[type=radio] {
     display: block; }
     .content-contacts-box a.content-contacts-box_email:hover {
       color: #141e2d; }
+  .content-contacts-box .content-contacts-box_tel-name {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: black;
+    margin-bottom: 5px; }
   .content-contacts-box .content-contacts-box_tel-title {
     font-family: 'Open Sans Light';
     font-size: 15px;
     color: #141e2d;
     margin-bottom: 5px; }
+  .content-contacts-box .content-contacts-box_tel-name + .content-contacts-box_tel-title {
+    margin-bottom: 15px; }
+
+.content-contacts-box.big-row {
+  display: inline-block;
+  vertical-align: top;
+  width: 47%;
+  margin-right: 3%;
+  margin-top: 60px;
+  margin-bottom: 20px; }
+  .content-contacts-box.big-row .content-contacts-box_row {
+    display: inline-block;
+    vertical-align: top;
+    width: 47%; }
+  .content-contacts-box.big-row .content-contacts-box_row:nth-child(2) {
+    margin-left: 0;
+    margin-right: 3%; }
+  .content-contacts-box.big-row .content-contacts-box_row:nth-child(3) {
+    margin-left: 3%;
+    margin-right: 0; }
 
 .container-logo {
   position: absolute;
@@ -10333,7 +10361,10 @@ p + .wrapper_row-hotline {
   .container-priomnaya-comp-info .box-update{
     width: 215px; }
   .container-priomnaya-comp-info .box-priomnaya-comp-info{
-    margin-left: 5%; } }
+    margin-left: 5%; }
+  .content-contacts-box.big-row{
+    width: 61%;
+    margin-right: 5%; } }
   @media all and (max-width: 1050px){
   .yandex{
     float: left;
@@ -11495,7 +11526,9 @@ p + .wrapper_row-hotline {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     color: #0a3c90;
-    padding: 12px 0 15px; } }
+    padding: 12px 0 15px; }
+  .content-contacts-box.big-row{
+    width: 94%; } }
   @media all and (max-width: 850px){
   .wrapper-admission-campaign .wrapper-admission-campaign_block .wrapper-admission-campaign_btn .wrapper-admission-campaign_btn-t{
     padding: 15px 10px; }
@@ -11662,4 +11695,15 @@ p + .wrapper_row-hotline {
   .wrapper_row-social .link-social:last-child{
     width: 85px; }
   .map-site-content_list-item{
-    width: 100%; } }
+    width: 100%; }
+  .content-contacts-box.big-row{
+    width: 100%;
+    margin-right: 0;
+    margin-top: 20px;
+    margin-bottom: 0; }
+  .content-contacts-box.big-row .content-contacts-box_row{
+    margin-bottom: 20px; }
+  .content-contacts-box.big-row .content-contacts-box_row:nth-child(2), .content-contacts-box.big-row .content-contacts-box_row:nth-child(3){
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0; } }
