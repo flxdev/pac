@@ -609,8 +609,6 @@ function initValidForm() {
                 modules: 'html5',
                 onSuccess: function ($form) {
                     formResponse(form_this);
-
-                    return false;
                 }
             });
         });
@@ -666,6 +664,16 @@ function initSliderScroll() {
     });
 }
 
+function initClosePopup() {
+    $('.block-forgot-password a').click(function () {
+        $.fancybox.close();
+    });
+
+    $('.block-registration a').click(function () {
+        $.fancybox.close();
+    })
+}
+
 function initSetting() {
     globalSetting.menuFirstOpen = false;
     globalSetting.menuOtherDel1 = false;
@@ -713,6 +721,7 @@ initStickyPrint();
 initFilter();
 initSmallMenu();
 initSliderScroll();
+initClosePopup();
 
 if ($(window).width() > 1024) { initSliderAnchor(); }
 $(window).on('resize', function() {
