@@ -754,8 +754,15 @@ function initDatePicer() {
 
 }
 
-function initClick() {
-
+function initPlayer(){
+    var players = $('.snipet-video');
+    players.each(function(){
+        var _ = $(this);
+        _.on('click', function(e){
+            _.addClass('played').find('iframe')[0].src += "?&autoplay=1";
+            e.preventDefault();
+        });
+    });
 }
 
 function initSetting() {
@@ -808,8 +815,7 @@ initSliderScroll();
 initClosePopup();
 initDisabledSel();
 initDatePicer();
-
-initClick();
+initPlayer();
 
 if ($(window).width() > 1024) { initSliderAnchor(); }
 $(window).on('resize', function() {
