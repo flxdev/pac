@@ -10601,6 +10601,54 @@ p + .wrapper_row-hotline {
     position: relative;
     z-index: 7; }
 
+.btn-prev-date {
+  position: absolute;
+  top: 10px;
+  left: -35px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px; }
+  .btn-prev-date:hover {
+    background-color: #ededed; }
+  .btn-prev-date .icon-prev-c {
+    background-image: url("../img/svg/arrow.svg");
+    background-size: contain;
+    width: 8px;
+    height: 12px;
+    background-repeat: round;
+    display: block;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    margin-top: 9px;
+    margin-left: 10px; }
+
+.btn-next-date {
+  position: absolute;
+  top: 10px;
+  right: -35px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px; }
+  .btn-next-date:hover {
+    background-color: #ededed; }
+  .btn-next-date .icon-next-c {
+    background-image: url("../img/svg/arrow.svg");
+    background-size: contain;
+    width: 8px;
+    height: 12px;
+    background-repeat: round;
+    display: block;
+    margin-top: 9px;
+    margin-left: 12px; }
+
+.no-active-date {
+  cursor: default !important;
+  pointer-events: none !important;
+  opacity: 0.3; }
+
 .container-calendar {
   width: 270px;
   height: 48px;

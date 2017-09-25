@@ -698,6 +698,9 @@ function initDisabledSel() {
 function initDatePicer() {
     var startDate;
     var endDate;
+    var dateT;
+    var inst;
+    var dateFormat;
 
 
     $(document.body).on('click', '.container-calendar', function(e) {
@@ -715,15 +718,16 @@ function initDatePicer() {
         selectOtherMonths: false,
         dateFormat: "dd.mm.yy",
         onSelect: function(dateText, inst) {
-            var date = $(this).datepicker('getDate');
-            startDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() - date.getDay());
-            endDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() - date.getDay() + 6);
-            var dateFormat = inst.settings.dateFormat || $.datepicker._defaults.dateFormat;
-            $('span.startDate').text($.datepicker.formatDate( dateFormat, startDate, inst.settings ));
-            $('span.endDate').text($.datepicker.formatDate( dateFormat, endDate, inst.settings ));
+            insts = inst;
+            dateT = $(this).datepicker('getDate');
+            startDate = new Date(dateT.getFullYear(), dateT.getMonth(), dateT.getDate() - dateT.getDay());
+            endDate = new Date(dateT.getFullYear(), dateT.getMonth(), dateT.getDate() - dateT.getDay() + 6);
+            dateFormat = insts.settings.dateFormat || $.datepicker._defaults.dateFormat;
+            $('span.startDate').text($.datepicker.formatDate( dateFormat, startDate, insts.settings ));
+            $('span.endDate').text($.datepicker.formatDate( dateFormat, endDate, insts.settings ));
 
-            $('input.startDate').val($.datepicker.formatDate( dateFormat, startDate, inst.settings ));
-            $('input.endDate').val($.datepicker.formatDate( dateFormat, endDate, inst.settings ));
+            $('input.startDate').val($.datepicker.formatDate( dateFormat, startDate, insts.settings ));
+            $('input.endDate').val($.datepicker.formatDate( dateFormat, endDate, insts.settings ));
 
             selectCurrentWeek();
         },
@@ -741,6 +745,8 @@ function initDatePicer() {
         }
     }).datepicker('widget').addClass('ui-weekpicker');
 
+    $('.week-picker').datepicker("setDate", "0");
+
     jQuery(function ($) {
         $.datepicker.setDefaults($.datepicker.regional['ru']);
     });
@@ -750,6 +756,35 @@ function initDatePicer() {
     });
     $('.ui-weekpicker .ui-datepicker-calendar tr').mouseleave(function() {
         $(this).find('td a').removeClass('ui-state-hover');
+    });
+
+
+    // Неделя вперед
+    $('.btn-next-date').on("click", function () {
+        dateT = $('.week-picker').datepicker('getDate');
+        startDate = new Date(dateT.getFullYear(), dateT.getMonth(), dateT.getDate() - dateT.getDay() + 7);
+        endDate = new Date(dateT.getFullYear(), dateT.getMonth(), dateT.getDate() - dateT.getDay() + 13);
+        dateFormat = insts.settings.dateFormat || $.datepicker._defaults.dateFormat;
+        $('span.startDate').text($.datepicker.formatDate( dateFormat, startDate, insts.settings ));
+        $('span.endDate').text($.datepicker.formatDate( dateFormat, endDate, insts.settings ));
+        $('.week-picker').datepicker("setDate", startDate);
+
+        $('input.startDate').val($.datepicker.formatDate( dateFormat, startDate, insts.settings ));
+        $('input.endDate').val($.datepicker.formatDate( dateFormat, endDate, insts.settings ));
+    });
+
+    // Неделя назад
+    $('.btn-prev-date').on("click", function () {
+        dateT = $('.week-picker').datepicker('getDate');
+        startDate = new Date(dateT.getFullYear(), dateT.getMonth(), dateT.getDate() - dateT.getDay() - 7);
+        endDate = new Date(dateT.getFullYear(), dateT.getMonth(), dateT.getDate() - dateT.getDay() - 1);
+        dateFormat = insts.settings.dateFormat || $.datepicker._defaults.dateFormat;
+        $('span.startDate').text($.datepicker.formatDate( dateFormat, startDate, insts.settings ));
+        $('span.endDate').text($.datepicker.formatDate( dateFormat, endDate, insts.settings ));
+        $('.week-picker').datepicker("setDate", startDate);
+
+        $('input.startDate').val($.datepicker.formatDate( dateFormat, startDate, insts.settings ));
+        $('input.endDate').val($.datepicker.formatDate( dateFormat, endDate, insts.settings ));
     });
 
 }
