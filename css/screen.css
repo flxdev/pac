@@ -10712,8 +10712,8 @@ p + .wrapper_row-hotline {
   -webkit-box-shadow: 0px 9px 30px 0px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 9px 30px 0px rgba(0, 0, 0, 0.15); }
   .ui-weekpicker .ui-datepicker-prev {
-    top: 0;
-    left: 2px;
+    top: 8px;
+    left: 28px;
     cursor: pointer; }
     .ui-weekpicker .ui-datepicker-prev .ui-icon {
       background-image: url(../img/svg/arrow.svg);
@@ -10732,12 +10732,12 @@ p + .wrapper_row-hotline {
       transform: rotate(180deg); }
     .ui-weekpicker .ui-datepicker-prev:hover {
       border: none;
-      top: 0;
-      right: 2px;
+      top: 8px;
+      left: 28px;
       border-radius: 50%; }
   .ui-weekpicker .ui-datepicker-next {
-    top: 0;
-    right: 2px;
+    top: 8px;
+    right: 28px;
     cursor: pointer; }
     .ui-weekpicker .ui-datepicker-next .ui-icon {
       background-image: url(../img/svg/arrow.svg);
@@ -10753,8 +10753,8 @@ p + .wrapper_row-hotline {
       margin-top: -7px; }
     .ui-weekpicker .ui-datepicker-next:hover {
       border: none;
-      top: 0;
-      right: 2px;
+      top: 8px;
+      right: 28px;
       border-radius: 50%; }
   .ui-weekpicker .ui-widget-header {
     padding: 0;
@@ -10763,6 +10763,8 @@ p + .wrapper_row-hotline {
     .ui-weekpicker .ui-widget-header .ui-datepicker-title {
       font-family: 'Open Sans', sans-serif;
       font-weight: 600; }
+  .ui-weekpicker .ui-datepicker-calendar thead tr:hover {
+    background-color: white; }
   .ui-weekpicker .ui-datepicker-calendar thead tr th {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
@@ -10803,6 +10805,9 @@ p + .wrapper_row-hotline {
       border: 1px solid #dad55e;
       background: #fffa90;
       color: #777620; }
+
+.ui-weekpicker .ui-widget-header .ui-datepicker-title {
+  margin-top: 8px; }
 
 .wrapper-incoming-schedule {
   width: 100%;
