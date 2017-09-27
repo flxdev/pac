@@ -793,6 +793,7 @@ function initDatePicker() {
         dateT = $('.week-picker').datepicker('getDate');
         startDate = new Date(dateT.getFullYear(), dateT.getMonth(), dateT.getDate() - dateT.getDay() + 1);
         endDate = new Date(dateT.getFullYear(), dateT.getMonth(), dateT.getDate() - dateT.getDay() + 7);
+        dateFormat = insts.settings.dateFormat || $.datepicker._defaults.dateFormat;
 
         $('span.startDate').text($.datepicker.formatDate(dateFormat, startDate, insts.settings));
         $('span.endDate').text($.datepicker.formatDate(dateFormat, endDate, insts.settings));
@@ -807,7 +808,8 @@ function initDatePicker() {
 
         dateT = $('.week-picker').datepicker('getDate');
         dateFormat = insts.settings.dateFormat || $.datepicker._defaults.dateFormat;
-        if (insts.settings.minDate === insts.lastVal) {
+
+        if (insts.settings.minDate === insts.lastVal || insts.settings.maxDate === insts.lastVal) {
             startDate = new Date(dateT.getFullYear(), dateT.getMonth(), dateT.getDate() - dateT.getDay() + 1);
             endDate = new Date(dateT.getFullYear(), dateT.getMonth(), dateT.getDate() - dateT.getDay() + 7);
         }else{
