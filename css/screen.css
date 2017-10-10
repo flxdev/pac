@@ -6464,7 +6464,7 @@ input[type=radio] {
 .footer-wrapper-content_lang {
   position: absolute;
   bottom: 18px;
-  left: -266px; }
+  left: -308px; }
   .footer-wrapper-content_lang .footer-wrapper-content_lang-txt {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
@@ -10663,7 +10663,8 @@ p + .wrapper_row-hotline {
       font-size: 36px;
       color: #404854;
       margin-bottom: 7px;
-      font-weight: 800; }
+      font-weight: 800;
+      padding-right: 40px; }
     .wrapper-incoming_faculty-options .block-faculty-info .faculty-group {
       font-family: 'Open Sans', sans-serif;
       font-weight: 300;
