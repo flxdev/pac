@@ -9,7 +9,7 @@ function initYandexMap() {
             }),
 
             myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-                hintContent: infoMap.description,
+                hintContent: "<div class='scsdcsdc'>" + infoMap.description +"</div>",
             }, {
                 iconLayout: 'default#image',
                 iconImageHref: 'img/balun.png',
@@ -18,7 +18,7 @@ function initYandexMap() {
             });
 
         var position = myMap.getGlobalPixelCenter();
-        myMap.setGlobalPixelCenter([ position[0] + 100, position[1] ]);
+        myMap.setGlobalPixelCenter([ position[0] + 250, position[1] ]);
 
         //
         // myMap.setCenter(myMap.converter.localPixelsToCoordinates(
@@ -33,6 +33,7 @@ function initYandexMap() {
         if ($(window).width() < 1025) {
             myMap.behaviors.disable('drag');
             myMap.behaviors.disable('scrollZoom');
+            myMap.setGlobalPixelCenter([ position[0] + 100, position[1] ]);
         }
     });
 }

@@ -1007,13 +1007,13 @@ function initFixTable() {
     } //FixHeaderCol
 
     function FixAction(el) {
-        var heightTdHead = $('.FixedTables').find('.table-head').height();
+        var heightTdHead = $('.FixedTables').find('thead').height();
         var heightTable = $('.FixedTables').height() + 80;
         // поиск по id
         $(".FixedTables").each(function() {
             var Id = $(this).get(0).id;
             var dataCol = $(this).data('col');
-            console.log(dataCol);
+            // console.log(dataCol);
             FixHeaderCol(gid(Id), 0, dataCol, 100, heightTable);
         });
 
