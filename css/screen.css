@@ -5201,6 +5201,33 @@ p {
 [id^="bx_incl_area"] {
   display: inline !important; }
 
+.ya-share2__item_service_vkontakte .ya-share2__badge {
+  background-color: inherit !important; }
+
+.ya-share2__item_service_vkontakte .ya-share2__icon {
+  width: 47px !important;
+  background: url(../img/vk-icon.png) !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important; }
+
+.ya-share2__item_service_gplus .ya-share2__badge {
+  background-color: inherit !important; }
+
+.ya-share2__item_service_gplus .ya-share2__icon {
+  background-image: url(../img/google-icon.png) !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  width: 78px !important; }
+
+.ya-share2__item_service_facebook .ya-share2__badge {
+  background-color: inherit !important; }
+
+.ya-share2__item_service_facebook .ya-share2__icon {
+  background-image: url(../img/face-icon.png) !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  width: 87px !important; }
+
 .container-wrapper-header {
   position: fixed;
   top: 0;
@@ -12222,6 +12249,15 @@ p + .wrapper_row-hotline {
     display: none; }
   .sticky-print{
     top: 95vh; } }
+  @media all and (max-width: 1280px){
+  .footer-wrapper{
+    width: 1130px; }
+  .container-wrapper-second-header .block-wrapper-title{
+    width: 1130px; }
+  .block-wrapper-content{
+    width: 1130px; }
+  .footer-wrapper-content_lang{
+    left: -292px; } }
   @media all and (max-width: 1240px){
   .hidden-sm-menu{
     display: none !important; } }
@@ -12357,7 +12393,7 @@ p + .wrapper_row-hotline {
   .footer-wrapper-content_dispatch .footer-wrapper-content_written .footer-wrapper-content_written-input-link .input{
     font-size: 11px; }
   .footer-wrapper-content_lang{
-    left: -185px; }
+    left: -175px; }
   .footer-wrapper-content_lang .footer-wrapper-content_lang-txt{
     font-size: 11px;
     margin-bottom: 5px; }
@@ -12556,7 +12592,9 @@ p + .wrapper_row-hotline {
   .wrapper-incoming_faculty-options .block-calendar{
     width: 35%; }
   .block-wrapper-content:first-child{
-    padding: 70px 15px; } }
+    padding: 70px 15px; }
+  .content-row-wrapper_row-txt img{
+    width: 100%; } }
   @media all and (max-width: 1050px){
   .yandex{
     float: left;
@@ -12596,14 +12634,19 @@ p + .wrapper_row-hotline {
   .footer-wrapper{
     width: 100%; }
   .block-wrapper-title_slicky{
-    width: 100%; } }
+    width: 100%; }
+  .footer-wrapper-content_lang{
+    left: -22%; } }
   @media all and (max-width: 930px){
+  .container-title .three-title{
+    word-break: break-all; }
   .block-second-header-sm{
     display: block; }
   .wrapper-second-header_lang .block-dropdown_lang .dropdown{
     z-index: 1; }
   .container-wrapper-second-header .block-wrapper-title .block-swiper-container-header .title{
-    width: 100%; }
+    width: 100%;
+    word-break: break-all; }
   .hidden-xs{
     display: none !important; }
   .container-wrapper-second-header{
@@ -12738,7 +12781,9 @@ p + .wrapper_row-hotline {
     padding-right: 15px; }
   .container-wrapper-second-header .block-wrapper-title{
     width: 100%;
-    padding-bottom: 60px; }
+    padding-bottom: 60px;
+    margin-left: 0;
+    margin-right: 0; }
   .container-wrapper-second-header .block-wrapper-title .title{
     width: 100%; }
   .block-swiper-container-header .swiper-pagination.swiper-pagination-bullets{
@@ -12953,7 +12998,8 @@ p + .wrapper_row-hotline {
   .wrapper-admission-campaign .wrapper-admission-campaign_block .txt{
     font-size: 15px; }
   .wrapper-admission-campaign .wrapper-admission-campaign_block .title{
-    margin-bottom: 25px; }
+    margin-bottom: 25px;
+    word-break: break-all; }
   .wrapper-admission-campaign .wrapper-admission-campaign_list .wrapper-admission-campaign_list-block{
     width: 100%;
     margin-right: 0;
@@ -13152,7 +13198,8 @@ p + .wrapper_row-hotline {
     bottom: 0;
     z-index: 6; }
   .container-wrapper-second-header .block-wrapper-title .block-wrapper-title_title-bread-crumbs .title{
-    margin-bottom: 25px; }
+    margin-bottom: 25px;
+    word-break: break-all; }
   .content-search-wrapper{
     width: 100%;
     padding: 40px 15px 0 15px; }
@@ -13373,7 +13420,8 @@ p + .wrapper_row-hotline {
     width: 50%;
     margin-bottom: 5px; }
   .wrapper-about-university .title{
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    word-break: break-all; }
   .wrapper-about-university_info{
     margin-top: 20px; }
   .wrapper-about-university{
@@ -13434,8 +13482,10 @@ p + .wrapper_row-hotline {
     margin-left: 8px; }
   .hidden-lms{
     display: block; }
+  .footer-wrapper-social-network ul{
+    text-align: center; }
   .footer-wrapper-social-network li{
-    height: 53px; }
+    width: 55px; }
   .wrapper-history-content .wrapper-history-content_date-foundation{
     width: 100%;
     margin-bottom: 35px; }
@@ -13782,6 +13832,16 @@ p + .wrapper_row-hotline {
     padding: 15px 10px; }
   .map-site-content_list-item{
     width: 50%; } }
+  @media all and (max-width: 800px){
+  .fancybox-infobar{
+    left: 0;
+    margin-left: 0; }
+  .fancybox-button--left,
+  .fancybox-button--right{
+    display: none !important; }
+  .fancybox-caption{
+    padding: 20px 0;
+    margin: 0; } }
   @media all and (min-width: 800px){
   .fancybox-button--thumbs{
     display: inline-block; }
@@ -13877,16 +13937,6 @@ p + .wrapper_row-hotline {
     transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   .fancybox-thumbs > ul > li.fancybox-thumbs-active:before{
     opacity: 1; } }
-  @media all and (max-width: 800px){
-  .fancybox-infobar{
-    left: 0;
-    margin-left: 0; }
-  .fancybox-button--left,
-  .fancybox-button--right{
-    display: none !important; }
-  .fancybox-caption{
-    padding: 20px 0;
-    margin: 0; } }
   @media all and (max-width: 767px){
   .w-p{
     width: 85%; }
@@ -13994,4 +14044,6 @@ p + .wrapper_row-hotline {
   .wrapper-admission-campaign_slider .services-link-box{
     padding-right: 75px;
     bottom: 20px;
-    left: 15px; } }
+    left: 15px; }
+  .footer-wrapper-social-network li{
+    width: 47px; } }
