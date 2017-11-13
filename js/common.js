@@ -1023,6 +1023,18 @@ function initFixTable() {
     FixAction();
 }
 
+function initAnhorHash() {
+    if ( window.location.hash ) scroll(0,0);
+    setTimeout( function() { scroll(0,0); }, 1);
+    $(function() {
+        if(window.location.hash) {
+            $('html, body').animate({
+                scrollTop: $(window.location.hash).offset().top - 100 + 'px'
+            }, 1000, 'swing');
+        }
+    });
+}
+
 function initSetting() {
     globalSetting.menuFirstOpen = false;
     globalSetting.menuOtherDel1 = false;
@@ -1087,6 +1099,7 @@ $(window).on('resize', function () {
 
 if ($(window).width() < 1024) {
     initNoClass();
+    initAnhorHash();
 }
 $(window).on('resize', function () {
     if ($(window).width() < 1024) {

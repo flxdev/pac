@@ -30,10 +30,9 @@ function initYandexMap() {
         myMap.geoObjects
             .add(myPlacemark);
 
-        myMap.behaviors.disable('scrollZoom');
-
         if ($(window).width() < 1025) {
             myMap.behaviors.disable('drag');
+            myMap.behaviors.disable('scrollZoom');
             myMap.setGlobalPixelCenter([ position[0] + 100, position[1] ]);
         }
     });
