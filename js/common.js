@@ -217,7 +217,7 @@ function initStickyPrint() {
     $(window).scroll(function () {
         if ($(document).scrollTop() > heightStickyPrint) {
             $('.wrapper_row-social-print').css({
-                "bottom": "0"
+                "bottom": "50px"
             })
         } else {
             $('.wrapper_row-social-print').css({

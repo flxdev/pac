@@ -9068,7 +9068,8 @@ input[type=radio] {
   width: 26%;
   padding-right: 40px;
   position: relative;
-  z-index: 2; }
+  z-index: 2;
+  margin-bottom: -50px; }
   .content-row-wrapper_row-menu .wrapper_row-menu {
     position: relative;
     width: 100%;
