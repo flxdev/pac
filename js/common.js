@@ -1026,10 +1026,13 @@ function initFixTable() {
 function initAnhorHash() {
     if ( window.location.hash ) scroll(0,0);
     setTimeout( function() { scroll(0,0); }, 1);
+
     $(function() {
         if(window.location.hash) {
+            var locHash = window.location.hash;
+            var searchAnchor = $('[data-anchor="'+locHash+'"]');
             $('html, body').animate({
-                scrollTop: $(window.location.hash).offset().top - 100 + 'px'
+                scrollTop: searchAnchor.offset().top - 100 + 'px'
             }, 1000, 'swing');
         }
     });
@@ -1099,7 +1102,6 @@ $(window).on('resize', function () {
 
 if ($(window).width() < 1024) {
     initNoClass();
-    initAnhorHash();
 }
 $(window).on('resize', function () {
     if ($(window).width() < 1024) {
@@ -1107,6 +1109,9 @@ $(window).on('resize', function () {
     }
 });
 
+if ($(window).width() < 931) {
+    initAnhorHash();
+}
 
 // Video width
 $(document).ready(function () {

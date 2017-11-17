@@ -12637,7 +12637,9 @@ p + .wrapper_row-hotline {
   .block-wrapper-title_slicky{
     width: 100%; }
   .footer-wrapper-content_lang{
-    left: -22%; } }
+    left: -22%; }
+  .wrapper_row-nav li a.active{
+    background: #edf2fd; } }
   @media all and (max-width: 930px){
   .container-title .three-title{
     word-break: break-all; }
