@@ -5228,6 +5228,9 @@ p {
   background-repeat: no-repeat !important;
   width: 87px !important; }
 
+.block-ie {
+  display: none; }
+
 .container-wrapper-header {
   position: fixed;
   top: 0;
@@ -7345,7 +7348,9 @@ input[type=radio] {
 
 .container-wrapper-content {
   width: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: white;
+  position: relative; }
 
 .block-wrapper-content {
   position: relative;
@@ -8879,6 +8884,103 @@ input[type=radio] {
     border: 2px solid #b4c2d8; }
   .fixRegion td.header-td[rowspan] {
     vertical-align: middle; }
+
+.ie10 .wrapper-admission-campaign_slider-swiper .swiper-slide {
+  float: left; }
+
+.ie9 .container-wrapper-header {
+  -webkit-filter: none !important;
+  filter: none !important; }
+
+.ie9 .content-404-wrapper .content-404-wrapper_txt-big span {
+  color: #000e25;
+  background: none;
+  -webkit-filter: none;
+  filter: none; }
+
+.ie9 .content-row-wrapper {
+  font-size: 0; }
+
+.ie9 .content-row-wrapper_row-menu {
+  display: inline-block;
+  vertical-align: top; }
+
+.ie9 .content-row-wrapper_row-txt {
+  display: inline-block;
+  vertical-align: top; }
+
+.ie9 .swiper-wrapper {
+  display: block; }
+
+.ie9 .swiper-slide {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 30px; }
+
+.ie9 .box-slider.content-row-wrapper_text .content-row-wrapper_text-slider .swiper-slide {
+  margin-bottom: 30px; }
+
+.ie9 .content-row-wrapper_text-slider .swiper-button-next, .ie9 .content-row-wrapper_text-slider .swiper-button-prev {
+  display: none; }
+
+.ie9 .wrapper-slider-about.revealator-zoomin {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1); }
+  .ie9 .wrapper-slider-about.revealator-zoomin .about-slider.content-row-wrapper_text-slider .swiper-slide .swiper-slide_title {
+    opacity: 1; }
+
+.ie9 .content-row-wrapper_text-slider.revealator-zoomin {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1); }
+
+.ie9 .block-ie {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; }
+  .ie9 .block-ie:before {
+    content: '';
+    width: 100%;
+    height: 100.3%;
+    background-color: rgba(8, 11, 38, 0.8);
+    position: absolute; }
+
+.ie9 .block-wrapper-tab, .ie9 .block-swiper-container-header-news {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1); }
+
+.ie9 .wrapper-additional-services {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1); }
+  .ie9 .wrapper-additional-services .swiper-button-prev, .ie9 .wrapper-additional-services .swiper-button-next {
+    display: none; }
+
+.ie9 .wrapper-admission-campaign_slider .swiper-slide {
+  width: 47%;
+  margin-right: 3%; }
+
+.ie9 .map-site-content {
+  overflow: auto; }
+
+.ie9 .map-site-content_list-item {
+  position: relative !important;
+  display: inline-block;
+  vertical-align: top; }
+
+.ie9 .map-site-content_list.page-o {
+  height: auto !important;
+  text-align: left !important; }
 
 .block-wrapper-sticky-mobile_swiper .swiper-pagination {
   display: none; }
@@ -13835,16 +13937,6 @@ p + .wrapper_row-hotline {
     padding: 15px 10px; }
   .map-site-content_list-item{
     width: 50%; } }
-  @media all and (max-width: 800px){
-  .fancybox-infobar{
-    left: 0;
-    margin-left: 0; }
-  .fancybox-button--left,
-  .fancybox-button--right{
-    display: none !important; }
-  .fancybox-caption{
-    padding: 20px 0;
-    margin: 0; } }
   @media all and (min-width: 800px){
   .fancybox-button--thumbs{
     display: inline-block; }
@@ -13940,6 +14032,16 @@ p + .wrapper_row-hotline {
     transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   .fancybox-thumbs > ul > li.fancybox-thumbs-active:before{
     opacity: 1; } }
+  @media all and (max-width: 800px){
+  .fancybox-infobar{
+    left: 0;
+    margin-left: 0; }
+  .fancybox-button--left,
+  .fancybox-button--right{
+    display: none !important; }
+  .fancybox-caption{
+    padding: 20px 0;
+    margin: 0; } }
   @media all and (max-width: 767px){
   .w-p{
     width: 85%; }
@@ -14050,3 +14152,9 @@ p + .wrapper_row-hotline {
     left: 15px; }
   .footer-wrapper-social-network li{
     width: 47px; } }
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+  .content-404-wrapper .content-404-wrapper_txt-big span{
+    color: #000e25;
+    background: none;
+    -webkit-filter: none;
+    filter: none; } }
