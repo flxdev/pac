@@ -12725,7 +12725,8 @@ p + .wrapper_row-hotline {
     top: auto;
     bottom: 70px; }
   .divFixHeaderCol{
-    overflow: scroll; }
+    overflow: scroll;
+    overflow-y: hidden; }
   .divFixHeaderCol .fixRegion:last-child + div{
     display: none; }
   .container-wrapper-second-header .block-wrapper-title{

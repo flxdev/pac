@@ -98,9 +98,6 @@ function initStyleB() {
     } else if(BrowserDetect.browser === 'Internet Explorer' && BrowserDetect.version === 9){
         $('body').addClass('ie9')
     }
-
-    // console.log(BrowserDetect.version);
-    // console.log(BrowserDetect.browser);
 }
 initStyleB();
 
@@ -304,7 +301,19 @@ function initSliderText() {
         paginationClickable: true,
         spaceBetween: 30,
         nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev'
+        prevButton: '.swiper-button-prev',
+        loop: false
+    });
+
+    $('.content-row-wrapper_text-slider').each(function () {
+        var eachBlock = $(this).length;
+        if(eachBlock === 1){
+            $('.swiper-slide').click(function () {
+                if ($(this).hasClass('swiper-slide-next')){
+                    swiper.slideNext()
+                }
+            });
+        }
     });
 }
 
